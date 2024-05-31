@@ -1,5 +1,6 @@
 # Image Search App With React
 ### [Author: Chandan Kumar]
+**Hosted URL:** https://image-search-app-chandan.netlify.app/
 
 ## Documentation / Steps to Develop: 
 
