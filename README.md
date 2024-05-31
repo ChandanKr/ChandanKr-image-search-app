@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# Image Search App With React
+### [Author: Chandan Kumar]
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Documentation / Steps to Develop: 
 
-## Available Scripts
+### Introduction
+- This document provides a step-by-step guide on how to create an image search web application using React. The application will allow users to search for images, view image details, and navigate between different pages.
 
-In the project directory, you can run:
+### Step 1: Set Up the Project
+- Create React App: Use the create-react-app command to initialize a new React project.
+  ```
+  npx create-react-app image-search-app
+  cd image-search-app
+  ```
 
-### `npm start`
+- Install Dependencies: Install necessary libraries including Material-UI, Axios, and React Router.
+  ```
+  npm install @mui/material @emotion/react @emotion/styled axios react-router-dom
+  ```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Step 2: Create Reusable Components
+- Button Component: Create a custom MUI button component for reusability.
+- TextField Component: Develop a custom MUI text field component for search input.
+- ImageCard Component: Design a component to display image and description.
+	
+### Step 3: Theme Configuration
+- Set Up Theme: Define a theme to maintain consistent typography across the application. 
+    - Configure typography settings for headlines, titles, and descriptions.
+	
+### Step 4: Create Service Component for API Calls
+- API Service Component: Utilize Axios to create a service component for making API calls. 
+    - Implement functions to fetch images and image details from the API.
+    - API URL used: “https://dummyjson.com/products” from DummyJSON.
+	
+### Step 5: Implement Routing
+- Configure Routes: Use React Router to set up routes for the home page and image details page.
+    - Define routes for "/" and "/details/".
+	
+### Step 6: Develop Home Page Component
+- Display Images: Fetch and display images on the home page.
+    - Use the TextField component for searching images.
+    - Implement pagination for navigating between pages.
+		
+### Step 7: Create Details Page Component
+- Show Image Details: Develop a page to display individual image details.
+    - Fetch and display details of the selected image.
+		
+### Step 8: Deploy to Netlify
+- Version Control: Create a repository on GitHub and push the code.
+- Deploy on Netlify: Link the repository to Netlify for deployment.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Conclusion
+Following these steps will help us to create a responsive image search web application using React, Material-UI, and Axios. The application will feature routing, API integration, and reusable components, providing users with an efficient and user-friendly image search experience.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Dependencies Used and Justification: 
+```
+npm install @mui/material @emotion/react @emotion/styled axios react-router-dom
+```
 
-### `npm run build`
+### @mui/material
+- **What it is:** This library provides ready-made components like buttons, text fields, and grids that we can use to build our web application's user interface.
+- **Why we use it:** Instead of creating these components from scratch, we can use MUI components to speed up development and ensure consistent styling across our app. It saves us time and effort.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### @emotion/react and @emotion/styled
+- **What they are:** These libraries help us style our components. They allow us to write CSS directly within our JavaScript code.
+- **Why we use them:** They make it easy to create custom styles for our components without having to manage separate CSS files. This keeps our styles organized and scoped to specific components, reducing the risk of conflicts.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### axios
+- **What it is:** Axios is a library for making HTTP requests from our application to external servers or APIs.
+- **Why we use it:** Our image search app needs to fetch images from an external API. Axios simplifies this process by providing a clean and easy-to-use interface for sending and receiving data over the internet.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### react-router-dom
+- **What it is:** This library helps us manage navigation within our React application by providing tools for creating different routes and handling URL changes.
+- **Why we use it:** We want our image search app to have multiple pages, such as a home page for searching images and a details page for viewing individual image details. React Router enables us to create these different pages and manage navigation between them seamlessly.
+	
+### Conclusion
+These dependencies are essential for building our image search web application. They provide tools and utilities that simplify development tasks, such as creating user interface components, styling them, fetching data from external sources, and managing navigation between different pages. By using these libraries, we can build our app more efficiently and effectively.
+ 
